@@ -76,7 +76,7 @@ namespace CalculateNetWorthUnitTesting
             netWorthRepository.Setup(x => x.calculateNetWorthAsync(_portFolioDetails[0])).ReturnsAsync(netWorth);
             var res = netWorthProvider.calculateNetWorthAsync(_portFolioDetails[0]).Result;
             Assert.AreEqual(res.Networth, networth);
-            Assert.Pass();
+            //Assert.Pass();
         }
 
         [Test]
@@ -86,7 +86,7 @@ namespace CalculateNetWorthUnitTesting
             PortFolioDetails portfolio = new PortFolioDetails();
             var result = netWorthProvider.calculateNetWorthAsync(portfolio);
             Assert.IsNull(result);
-            Assert.Pass();
+            //Assert.Pass();
         }
 
         [Test]
@@ -136,7 +136,7 @@ namespace CalculateNetWorthUnitTesting
             ObjectResult okResult = data as ObjectResult;
             
             Assert.AreEqual(200, okResult.StatusCode);
-            Assert.Pass();
+            //Assert.Pass();
 
         }
 
@@ -149,7 +149,7 @@ namespace CalculateNetWorthUnitTesting
             ObjectResult okResult = data as ObjectResult;
 
             Assert.AreEqual(404, okResult.StatusCode);
-            Assert.Pass();
+            //Assert.Pass();
 
         }
 

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: calculatenetworthrepos
-        image: myportfoliomanagementcr.azurecr.io/networth:latest
+        image: portfoliocr.azurecr.io/networth:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
